@@ -7,7 +7,7 @@ x=int(input("Lütfen bir sayı giriniz:"))
 
 liste=[2,3]
 for i in range(5,x,2):
-    a=math.floor(i**0.5)        #Burası biraz matematik kokuyor:)
+    a=math.floor(i**0.5)        #Bir sayının asal bölenleri, o sayının karekökünden büyük olamaz.
     for j in range(3,a+3,2):
         if (i % j == 0):
             break
