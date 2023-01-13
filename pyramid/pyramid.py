@@ -2,7 +2,6 @@ import math
 
 def read_file(file_name=str):
     """Read .txt file. Clear lines. Create a list of lines."""
-    lines_list=[]
     with open(file_name, "r") as f:
         lines_raw=(f.readlines())
         lines = [i.replace("\n","").split(" ") for i in lines_raw]
@@ -21,11 +20,8 @@ def prime_number(number=int):
     else:
         return False
 
-def decide_max_number(lines):
+def decide_max_number(lines,max_numbers=[],selected_index=0):
     """Create a list of max-non-prime number of desired interval of line."""
-    max_numbers=[]
-    selected_index=0
-    
     for i in lines:
         max_number_of_line = int(max(lines[lines.index(i)][selected_index:selected_index+2]))#max number
         min_number_of_line = int(min(lines[lines.index(i)][selected_index:selected_index+2]))#min number
